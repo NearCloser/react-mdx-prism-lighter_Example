@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+
+.ArticleContentWidth {
+  max-width: 750px;
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: 300;
+}
+
+.highlight-line {
+  background-color: rgba(223, 228, 231, 0.363);
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.5rem;
+  border-left: 0.25rem solid rgba(144, 250, 245, 0.959);
+}
+
+.public-DraftEditor-content {
+  min-height: 500px;
+}
