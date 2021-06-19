@@ -2,13 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 
-import { LoremIpsum } from "react-lorem-ipsum"
 import CodeBlock from "@components/Code/index"
-
-const getListId = (props) => {
-  const name = props.children.toLowerCase()
-  return name.replace(/\s/g, "-")
-}
 
 const BasicComponents = {
   pre: ({ children }) => {
@@ -26,8 +20,8 @@ const BasicComponents = {
   },
   h1: (props) => (
     <h1
-      className="mb-6 mt-4 text-xl text-opacity-80 text-primary"
-      id={`${getListId(props)}`}
+      className="mb-6 mt-4 text-2xl  text-primary pl-4 leading-6"
+      style={{ borderLeft: "4px solid #31386F " }}
       {...props}>
       {props.children}
     </h1>
@@ -35,24 +29,17 @@ const BasicComponents = {
   h2: (props) => (
     <h2
       className="mb-4 mt-4 text-2xl text-opacity-90 text-primary font-medium"
-      id={`${getListId(props)}`}
       {...props}>
       {props.children}
     </h2>
   ),
   h3: (props) => (
-    <h3
-      className="mb-2 mt-3 text-opacity-80 text-primary"
-      id={`${getListId(props)}`}
-      {...props}>
+    <h3 className="mb-2 mt-3 text-opacity-80 text-primary" {...props}>
       {props.children}
     </h3>
   ),
   h4: (props) => (
-    <h4
-      className="mb-2 mt-2 text-opacity-80 text-primary"
-      id={`${getListId(props)}`}
-      {...props}>
+    <h4 className="mb-2 mt-2 text-opacity-80 text-primary" {...props}>
       {props.children}
     </h4>
   ),
@@ -68,8 +55,7 @@ const OtherComponents = {
 
 const Root = ({ element }) => {
   return (
-    <MDXProvider
-      components={{ ...OtherComponents, ...BasicComponents, LoremIpsum }}>
+    <MDXProvider components={{ ...OtherComponents, ...BasicComponents }}>
       {element}
     </MDXProvider>
   )
