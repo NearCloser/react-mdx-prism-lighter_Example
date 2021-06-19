@@ -5,7 +5,7 @@ module.exports = {
   corePlugins: {
     preflight: true,
   },
-  purge: true,
+  purge: ["./src/**/*.tsx", "./src/**/*.js?x"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
