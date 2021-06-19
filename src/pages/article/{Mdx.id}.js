@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import Helmet from "react-helmet"
 
 export const query = graphql`
   query ($id: String!) {
@@ -22,6 +23,11 @@ export const query = graphql`
 const ArtcilePage = ({ data: { mdx }, pageContext }) => {
   return (
     <div className="ArticleContentWidth mx-auto md:px-0  px-8">
+      <Helmet>
+        <title>react-mdx-prism-lighter</title>
+        <meta name="description" content="react-mdx-prism-lighterの説明" />
+        <html lang="ja" />
+      </Helmet>
       <div className="mt-20">
         <h1 className="text-3xl font-medium text-primary tracking-wide">
           {mdx.frontmatter.title}

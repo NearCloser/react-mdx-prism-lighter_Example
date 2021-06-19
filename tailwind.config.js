@@ -5,6 +5,7 @@ module.exports = {
   corePlugins: {
     preflight: true,
   },
+  purge: ["src/**/*", "./Gatsby-Root.js"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -25,7 +26,7 @@ module.exports = {
         green: colors.green,
         emerald: colors.emerald,
         teal: colors.teal,
-        lightblue: colors.lightBlue,
+        lightblue: colors.sky,
         rose: colors.rose,
         orange: colors.orange,
         ...defaultTheme.colors,

@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
+import Helmet from "react-helmet"
 
 export const query = graphql`
   query ($skip: Int!, $limit: Int!) {
@@ -29,6 +30,11 @@ const ArticleParts = ({ data, pageContext }) => {
 
   return (
     <div className="rounded-lg px-8 py-8 max-w-screen-md mx-auto mt-16 mb-8">
+      <Helmet>
+        <title>react-mdx-prism-lighter</title>
+        <meta name="description" content="react-mdx-prism-lighter" />
+        <html lang="ja" />
+      </Helmet>
       <ul className="divide-y divide-coolgray-200">
         {Articles &&
           Articles.map(({ node }) => {
